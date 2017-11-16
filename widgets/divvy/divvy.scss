@@ -1,0 +1,63 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #3eb4e6;
+$value-color:       #ffffff;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$label-color:       rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-divvy {
+
+  background-color: $background-color;
+  vertical-align: top;
+
+  .title {
+    color: $title-color;
+  }
+
+  ul {
+    margin: 0 15px;
+    text-align: left;
+    color: $label-color;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  .station {
+    display: block;
+    font-weight: bold;
+  }
+
+  .bikes, .docks, .error {
+    color: $value-color;
+  }
+
+  .bikes:after, .docks:after {
+    margin: 0 8px;
+  }
+
+  .bikes:after {
+    content: 'bikes';
+  }
+
+  .docks:after {
+    content: 'docks';
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .updated-at:before {
+    content: '\f017';
+    font-family: FontAwesome;
+    margin: 0 4px;
+  }
+}

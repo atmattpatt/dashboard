@@ -1,0 +1,16 @@
+<h1 class="title"><img src="/assets/divvy/logo.png" alt="Divvy Bikes"></h1>
+
+<div class="error">
+  <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error</strong><br>
+  <span data-bind="error"></span>
+</div>
+
+<ul>
+  <li data-foreach-item="items">
+    <span class="station" data-bind="item.stationName"></span>
+    <span class="bikes" data-bind="item.availableBikes"></span>
+    <span class="docks" data-bind="item.availableDocks"></span>
+  </li>
+</ol>
+
+<p class="updated-at" data-bind="updated_at"></p>
