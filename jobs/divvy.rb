@@ -44,9 +44,9 @@ class DivvyClient
     @error_message = nil
   end
 
-  def error(msg)
+  def error(message)
     @success = false
-    @error_message = msg
+    @error_message = message
     @updated_at = timezone.now
   end
 

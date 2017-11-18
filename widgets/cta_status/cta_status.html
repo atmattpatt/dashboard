@@ -1,0 +1,15 @@
+<h1 class="title">CTA Status</h1>
+
+<div class="error">
+  <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error</strong><br>
+  <span data-bind="error"></span>
+</div>
+
+<ul>
+  <li data-foreach-item="items">
+    <span class="route" data-bind="item.route" data-bind-route-color="item.route_color_code"></span>
+    <span class="status" data-bind="item.route_status"></span>
+  </li>
+</ol>
+
+<p class="updated-at" data-bind="updated_at"></p>
