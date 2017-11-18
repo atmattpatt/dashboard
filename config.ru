@@ -1,5 +1,5 @@
-require "dashing"
 require "dotenv/load"
+require "dashing"
 
 configure do
   set :auth_token, ENV["AUTH_TOKEN"]

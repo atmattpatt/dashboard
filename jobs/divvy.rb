@@ -1,4 +1,4 @@
-DIVVY_CLIENT = Divvy::Client.new(watch_stations: %w(339 401 402 403))
+DIVVY_CLIENT = Divvy::Client.new(watch_stations: ENV["DIVVY_WATCH_STATIONS"].split(","))
 
 SCHEDULER.every '5m', first_in: 0 do |job|
   DIVVY_CLIENT.fetch

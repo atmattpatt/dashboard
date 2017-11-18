@@ -1,4 +1,4 @@
-CTA_STATUS_CLIENT = CTA::StatusClient.new(watch_routes: %w(Red Blue Brn=Brown G=Green Org=Orange Pink 24 31))
+CTA_STATUS_CLIENT = CTA::StatusClient.new(watch_routes: ENV["CTA_WATCH_ROUTES"].split(","))
 
 SCHEDULER.every '1m', first_in: 0 do |job|
   CTA_STATUS_CLIENT.fetch
