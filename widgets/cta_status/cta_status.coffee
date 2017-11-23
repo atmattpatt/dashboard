@@ -18,9 +18,3 @@ class Dashing.CTAStatus extends Dashing.Widget
           dataObserver.observe(span, attributes: true, childList: false, characterData: false)
 
     observer.observe(target, attributes: false, childList: true, characterData: false)
-
-  onData: (data) ->
-    if data.success
-      $(@node).find(".error").hide()
-    else
-      $(@node).find(".error").show()
