@@ -1,0 +1,21 @@
+<h1 class="title">CTA Alerts</h1>
+
+<div class="error" data-hideif="success">
+  <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error</strong><br>
+  <span data-bind="error"></span>
+</div>
+
+<ul>
+  <li data-foreach-item="items" data-addclass-active="item.active" data-addclass-major="item.major_alert" data-bind-route-color="item.impacted_services[0].color">
+    <span class="impact" data-bind="item.impact"></span>
+    <span class="summary" data-bind="item.summary"></span>
+    <div class="event-attrs">
+      <span class="event-start" data-bind="item.event_start"></span>
+      <span class="event-end" data-bind="item.event_end" data-showif="item.event_end"></span>
+      <span class="event-end" data-hideif="item.event_end">TBD</span>
+      <span class="severity-score" data-bind="item.severity_score"></span>
+    </div>
+  </li>
+</ol>
+
+<p class="updated-at" data-bind="updated_at"></p>

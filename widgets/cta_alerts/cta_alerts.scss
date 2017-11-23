@@ -1,0 +1,104 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #0079c2;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+
+$active-alert-color: #ffffff;
+$inactive-alert-color: rgba(255, 255, 255, 0.7);
+
+$impact-color: rgba(255, 255, 255, 0.6);
+$major-impact-color: orange;
+
+$error-color: #ffffff;
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-cta-alerts {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  ul {
+    color: $inactive-alert-color;
+    margin: 0 4px;
+    max-height: inherit;
+    overflow-y: hidden;
+    text-align: left;
+    width: inherit;
+  }
+
+  li {
+    border-left: solid 8px transparent;
+    margin: 8px 0;
+    padding-left: 4px;
+  }
+
+  li.active {
+    border-left: solid 8px;
+    color: $active-alert-color;
+    padding-left: 4px;
+  }
+
+  li.major {
+    .impact {
+      color: $major-impact-color;
+    }
+  }
+
+  .summary {
+    font-size: 0.8em;
+  }
+
+  .impact {
+    color: $impact-color;
+    display: block;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .event-attrs {
+    font-size: 0.8em;
+
+    .event-start:before {
+      content: '\f017';
+      font-family: FontAwesome;
+      margin: 0 4px;
+    }
+
+    .event-start:after {
+      content: ' -';
+    }
+
+    .event-end {
+      margin-right: 8px;
+    }
+
+    .severity-score:before {
+      content: '\f2c9';
+      font-family: FontAwesome;
+      margin: 0 4px;
+    }
+  }
+
+  .error {
+    color: $error-color;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .updated-at:before {
+    content: '\f017';
+    font-family: FontAwesome;
+    margin: 0 4px;
+  }
+}
