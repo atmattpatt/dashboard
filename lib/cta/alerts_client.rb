@@ -92,9 +92,9 @@ module CTA
 
     def compare_alerts(a, b)
       case
-      when a[:active] && !b[:active] then 1
-      when !a[:active] && b[:active] then -1
-      when a[:severity_score] != b[:severity_score] then b[:severity_score] <=> a[:severity_score]
+      when a[:active] && !b[:active] then -1
+      when !a[:active] && b[:active] then 1
+      when a[:severity_score] != b[:severity_score] then b[:severity_score].to_i <=> a[:severity_score].to_i
       else a[:start_time] <=> b[:start_time]
       end
     end
