@@ -1,0 +1,19 @@
+<h1 class="title">CTA Arrivals</h1>
+
+<div class="error" data-hideif="success">
+  <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error</strong><br>
+  <span data-bind="error"></span>
+</div>
+
+<ul>
+  <li data-foreach-item="items" data-bind-route-color="item.route.color_code">
+    <span class="eta" data-bind="item.eta"></span>
+    <div class="route-run">
+      <span class="route" data-bind="item.route.full_name"></span>
+      <span class="run" data-bind="item.train.run"></span> toward
+    </div>
+    <span class="destination" data-bind="item.destination"></span>
+  </li>
+</ol>
+
+<p class="updated-at" data-bind="updated_at"></p>

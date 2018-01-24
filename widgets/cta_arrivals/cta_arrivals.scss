@@ -1,0 +1,81 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #262626;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+
+$active-alert-color: #ffffff;
+$inactive-alert-color: rgba(255, 255, 255, 0.7);
+
+$impact-color: rgba(255, 255, 255, 0.6);
+$major-impact-color: orange;
+
+$error-color: #ffffff;
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-cta-arrivals {
+
+  background-color: $background-color;
+  vertical-align: top !important;
+
+  .title {
+    color: $title-color;
+  }
+
+  ul {
+    font-family: Helvetica,sans-serif;
+    margin: 0;
+    max-height: inherit;
+    overflow-y: hidden;
+    text-align: left;
+    width: inherit;
+  }
+
+  li {
+    border-top: none;
+    border-bottom: solid 1px #ffffff;
+    padding: 8px 4px;
+  }
+
+  li:first-child {
+    border-top: solid 1px #ffffff;
+  }
+
+  .route-run {
+    font-size: 0.7em;
+    margin-bottom: 4px;
+  }
+
+  .run:before {
+    content: '#';
+  }
+
+  .destination {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+
+  .eta {
+    float: right;
+    font-size: 1.8em;
+    margin-top: 0.2em;
+  }
+
+  .error {
+    color: $error-color;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+  }
+
+  .updated-at:before {
+    content: '\f017';
+    font-family: FontAwesome;
+    margin: 0 4px;
+  }
+}
